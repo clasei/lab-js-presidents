@@ -524,5 +524,14 @@ console.log(countRepublicanPresidents(presidents));
 
 // ________________________________________________________________________>>>
 // Bonus: Iteration 8 | Sort Presidents by Name - `sort()`
-function sortPresidentsByName(presidentsArr) {}
+function sortPresidentsByName(presidentsArr) {
+  let presidentsAlphabeticallyOrdered = presidentsArr.sort(
+    (president1, president2) => {
+      return president1.name.localeCompare(president2.name); // <-- localeCompare used
+    }
+  );
 
+  return presidentsAlphabeticallyOrdered;
+}
+
+console.log(sortPresidentsByName(presidents));
