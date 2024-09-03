@@ -449,9 +449,20 @@ console.log(getDemocraticPresidents(presidents))
 
 // ________________________________________________________________________>>>
 // Iteration 3 | Count Years in Office - reduce()
-function  countYearsInOffice(presidentsArr) {}
+function  countYearsInOffice(presidentsArr) {
 
+  let totalYearsInOffice = presidentsArr.reduce((acc, eachPresident) => {
+    if (eachPresident.leftOffice != null) {
+      return acc + (eachPresident.leftOffice - eachPresident.tookOffice)
+      } else {
+        return acc
+      }
+  }, 0)
 
+  return totalYearsInOffice
+}
+
+console.log(countYearsInOffice(presidents));
 
 // ________________________________________________________________________>>>
 // Iteration 4 | Sort Presidents by Birth Year - `sort()`
