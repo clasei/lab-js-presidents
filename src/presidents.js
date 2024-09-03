@@ -497,10 +497,14 @@ console.log(getAgeAtInauguration(presidents));
 // ________________________________________________________________________>>>
 // Bonus: Iteration 6 | Presidents Born After - `filter()`
 function getPresidentsBornAfter(presidentsArr, year) {
-  
+  let presidentsBornAfterAYear = presidentsArr.filter((president) => {
+    return president.birthYear > year
+  })
+    
+  return presidentsBornAfterAYear
 }
 
-
+console.log(getPresidentsBornAfter(presidents, 1945));
 
 // ________________________________________________________________________>>>
 // Bonus: Iteration 7 | Count Republican Presidents
