@@ -416,12 +416,27 @@ const presidents = [
 ];
 
 
+/*
+    It is possible for certain properties, such as party and leftOffice, 
+    to have a value of null. For instance, if a president was not affiliated 
+    with any political party, the party property would be null. Similarly, 
+    if a president is still in office, the leftOffice property would be null.
+*/
 
 
 // Iteration 1 | Names of All Presidents - `map()`
-function getNames(presidentsArr) {}
+function getNames(presidentsArr) {
+
+  let presidentsNameArray = presidentsArr.map((presidents) => {
+
+    return presidents.name
+  })
+
+  return presidentsNameArray
+}
 
 
+console.log(getNames(presidents));
 
 
 // Iteration 2 | Democratic Presidents - `filter()`
