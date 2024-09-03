@@ -508,9 +508,19 @@ console.log(getPresidentsBornAfter(presidents, 1945));
 
 // ________________________________________________________________________>>>
 // Bonus: Iteration 7 | Count Republican Presidents
-function countRepublicanPresidents(presidentsArr) {}
+function countRepublicanPresidents(presidentsArr) {
+  let republicanPresidents = presidentsArr.reduce((acc, president) => {
+    if (president.party === "Republican") {
+      return acc + 1;
+    } else {
+      return acc;
+    }
+  }, 0);
 
+  return republicanPresidents;
+}
 
+console.log(countRepublicanPresidents(presidents));
 
 // ________________________________________________________________________>>>
 // Bonus: Iteration 8 | Sort Presidents by Name - `sort()`
